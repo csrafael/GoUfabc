@@ -8,7 +8,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:orientation="vertical"
-    android:id="@+id/tela2Master"
+    android:id="@+id/telaTime"
     tools:context="android.ufabc.edu.br.goufabc.ListActivity">
 
 
@@ -16,13 +16,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="15"
-        android:id="@+id/tela2Cabecalho">
+        android:id="@+id/telaTimeTop">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Listagem dos Cadastrados"
+            android:text="Seu Time"
             android:id="@+id/textView3"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />

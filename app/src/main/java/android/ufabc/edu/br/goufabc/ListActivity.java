@@ -1,13 +1,64 @@
 package android.ufabc.edu.br.goufabc;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import android.ufabc.edu.br.goufabc.Matrix;
 
 public class ListActivity extends AppCompatActivity {
+
+    public Context ctx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        ListView lstPokemon = (ListView)findViewById(R.id.lstPokemon);
+        ArrayAdapter<String> adaptador;
+
+        ArrayList<String> listaPokemon = null;
+        try {
+            listaPokemon = matrixToList(Matrix.readFromAssets(ctx, "pkmn.txt"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        adaptador = new ArrayAdapter<String>(this,           //activity que contém a listView
+                android.R.layout.simple_list_item_1, // estilo dos itens
+                listaPokemon);              // a lista de elementos ALTERAR COM A LISTA CERTA
+
+        lstPokemon.setAdapter(adaptador);
+
+        lstPokemon.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            public void onItemClick(AdapterView<?> adaptador, View v, int pos, long id){
+                //Toast.makeText(ListActivity.this, "Pos="+pos+" Id="+id, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(ListActivity.this, Pokemon.class);
+                //String itemClicked = lstPokemon[pos];
+                //intent.putExtra("country", itemClicked);
+                startActivity(intent);
+
+            }
+        });
     }
+
+    public static <String> ArrayList<String> matrixToList(String[][] twod_array){
+        ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i < twod_array.length; i++) {
+            for (int j = 0; j < twod_array[i].length; j++) {
+                list.add(twod_array[i][j]);
+            }
+        }
+        return list;
+    }
+
 }

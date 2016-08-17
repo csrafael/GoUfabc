@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -17,7 +18,17 @@
         </activity>
         <activity android:name=".InitActivity" />
         <activity android:name=".ListActivity" />
-        <activity android:name=".RegActivity"></activity>
+        <activity android:name=".RegActivity" />
+        <activity android:name=".Pokemon" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".TimeActivity"></activity>
     </application>
 
 </manifest>
