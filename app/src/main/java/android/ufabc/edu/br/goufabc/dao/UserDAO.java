@@ -37,7 +37,7 @@ public class UserDAO implements DAO{
         }
     }
 
-    /*public String[][] readAll(){
+    public String[][] readAll(){
         try{
             String colunas[] = {"name","pwd"};
             SQLiteDatabase rdb = dataSource.getReadableDatabase();
@@ -53,20 +53,20 @@ public class UserDAO implements DAO{
                     null);                       // limit
 
             if (cursor.moveToFirst()){
-                String[][] resultSet = new String[][];
+                String[][] resultSet = new String[1000][2];
                 int i = 0;
                 do{
                     resultSet[i][0] = cursor.getString(0);
                     resultSet[i][1] = String.valueOf(cursor.getInt(1));
-                    *//*User user = new User();
-                    // popular o objeto com os valres do cursor
+                    /*User user = new User();
+                     popular o objeto com os valres do cursor
                     user.setUser(cursor.getString(0));
                     user.setPwd(cursor.getInt(1));
 
-                    resultSet.add(user);*//*
+                    resultSet.add(user);*/
                     i++;
                 } while (cursor.moveToNext());
-                db.close();
+                rdb.close();
                 cursor.close();
                 return resultSet;
             }
@@ -76,7 +76,7 @@ public class UserDAO implements DAO{
             Log.d("USERDAO.READALL", ex.getMessage());
         }
         return null;
-    }*/
+    }
 
     @Override
     public Object read(Object o) {
