@@ -42,15 +42,19 @@ public class ListActivity extends AppCompatActivity {
 
         lstPokemon.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> adaptador, View v, int pos, long id){
-                Toast.makeText(ListActivity.this, "Pokemon="+id, Toast.LENGTH_LONG).show();
+                Toast.makeText(ListActivity.this, "Pokemon="+pos, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(ListActivity.this, Pokemon.class);
                 //String itemClicked = listaPokemon.get(pos);
-                //intent.putExtra("pokemon", itemClicked);
+                //Bundle parametros = new Bundle();
+                //parametros.putLong("pokemon" , id);
+                //intent.putExtra(parametros);
+                intent.putExtra("pokemon", id);
                 startActivity(intent);
 
             }
         });
     }
+
 
     public static <String> ArrayList<String> matrixToList(String[][] twod_array){
         int j = 0;
