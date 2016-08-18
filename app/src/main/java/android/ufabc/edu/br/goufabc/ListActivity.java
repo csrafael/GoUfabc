@@ -44,10 +44,6 @@ public class ListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adaptador, View v, int pos, long id){
                 Toast.makeText(ListActivity.this, "Pokemon="+pos, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(ListActivity.this, Pokemon.class);
-                //String itemClicked = listaPokemon.get(pos);
-                //Bundle parametros = new Bundle();
-                //parametros.putLong("pokemon" , id);
-                //intent.putExtra(parametros);
                 intent.putExtra("pokemon", id);
                 startActivity(intent);
 
