@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="android.ufabc.edu.br.goufabc">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:debuggable="true"
@@ -30,7 +30,6 @@
 
         <activity android:name=".TimeActivity" />
 
-        <uses-permission android:name="android.permission.INTERNET" />
 
         <activity android:name=".AddActivity"></activity>
     </application>

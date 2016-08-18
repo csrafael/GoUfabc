@@ -1,14 +1,14 @@
 #001 Bulbasaur http://www.serebii.net/xy/pokemon/001.png http://www.serebii.net/pokedex-bw/type/grass.gif http://www.serebii.net/pokedex-bw/type/poison.gif
 #002 Ivysaur http://www.serebii.net/xy/pokemon/002.png http://www.serebii.net/pokedex-bw/type/grass.gif http://www.serebii.net/pokedex-bw/type/poison.gif
 #003 Venusaur http://www.serebii.net/xy/pokemon/003.png http://www.serebii.net/pokedex-bw/type/grass.gif http://www.serebii.net/pokedex-bw/type/poison.gif
-#004 Charmander http://www.serebii.net/xy/pokemon/004.png http://www.serebii.net/pokedex-bw/type/fire.gif
-#005 Charmeleon http://www.serebii.net/xy/pokemon/005.png http://www.serebii.net/pokedex-bw/type/fire.gif
+#004 Charmander http://www.serebii.net/xy/pokemon/004.png http://www.serebii.net/pokedex-bw/type/fire.gif null
+#005 Charmeleon http://www.serebii.net/xy/pokemon/005.png http://www.serebii.net/pokedex-bw/type/fire.gif null
 #006 Charizard http://www.serebii.net/xy/pokemon/006.png http://www.serebii.net/pokedex-bw/type/fire.gif http://www.serebii.net/pokedex-bw/type/flying.gif
-#007 Squirtle http://www.serebii.net/xy/pokemon/007.png http://www.serebii.net/pokedex-bw/type/water.gif
-#008 Wartortle http://www.serebii.net/xy/pokemon/008.png http://www.serebii.net/pokedex-bw/type/water.gif
-#009 Blastoise http://www.serebii.net/xy/pokemon/009.png http://www.serebii.net/pokedex-bw/type/water.gif
-#010 Caterpie http://www.serebii.net/xy/pokemon/010.png http://www.serebii.net/pokedex-bw/type/bug.gif
-#011 Metapod http://www.serebii.net/xy/pokemon/011.png http://www.serebii.net/pokedex-bw/type/bug.gif
+#007 Squirtle http://www.serebii.net/xy/pokemon/007.png http://www.serebii.net/pokedex-bw/type/water.gif null
+#008 Wartortle http://www.serebii.net/xy/pokemon/008.png http://www.serebii.net/pokedex-bw/type/water.gif null
+#009 Blastoise http://www.serebii.net/xy/pokemon/009.png http://www.serebii.net/pokedex-bw/type/water.gif null
+#010 Caterpie http://www.serebii.net/xy/pokemon/010.png http://www.serebii.net/pokedex-bw/type/bug.gif null
+#011 Metapod http://www.serebii.net/xy/pokemon/011.png http://www.serebii.net/pokedex-bw/type/bug.gif null
 #012 Butterfree http://www.serebii.net/xy/pokemon/012.png http://www.serebii.net/pokedex-bw/type/bug.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #013 Weedle http://www.serebii.net/xy/pokemon/013.png http://www.serebii.net/pokedex-bw/type/bug.gif http://www.serebii.net/pokedex-bw/type/poison.gif
 #014 Kakuna http://www.serebii.net/xy/pokemon/014.png http://www.serebii.net/pokedex-bw/type/bug.gif http://www.serebii.net/pokedex-bw/type/poison.gif
@@ -17,7 +17,7 @@
 #017 Pidgeotto http://www.serebii.net/xy/pokemon/017.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #018 Pidgeot http://www.serebii.net/xy/pokemon/018.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #019 Rattata http://www.serebii.net/xy/pokemon/019.png http://www.serebii.net/pokedex-bw/type/normal.gif null
-#020 Raticate http://www.serebii.net/xy/pokemon/020.png http://www.serebii.net/pokedex-bw/type/normal.gif
+#020 Raticate http://www.serebii.net/xy/pokemon/020.png http://www.serebii.net/pokedex-bw/type/normal.gif null
 #021 Spearow http://www.serebii.net/xy/pokemon/021.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #022 Fearow  http://www.serebii.net/xy/pokemon/022.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #023 Ekans http://www.serebii.net/xy/pokemon/023.png http://www.serebii.net/pokedex-bw/type/poison.gif null

@@ -47,7 +47,7 @@ public class Pokemon extends AppCompatActivity {
 
         new LoadImagefromUrl( ).execute((ImageView) findViewById(R.id.imgType1), listaPokemon[id][3].toString());
 
-        if (listaPokemon[id][4] != "null"){
+        if (listaPokemon[id][4].toString() != "null"){
             new LoadImagefromUrl( ).execute((ImageView) findViewById(R.id.imgType2), listaPokemon[id][4].toString());
         }
     }
