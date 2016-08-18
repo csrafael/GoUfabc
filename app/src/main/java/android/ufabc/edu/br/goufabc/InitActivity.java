@@ -3,10 +3,12 @@ package android.ufabc.edu.br.goufabc;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.ufabc.edu.br.goufabc.dao.UserDAO;
 import android.util.Log;
 import android.view.View;
 
 public class InitActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +17,12 @@ public class InitActivity extends AppCompatActivity {
     }
 
     public void clickLogin(View view){
+        //String[][] Compara = new String[][];
+        //Compara = UserDAO.readAll();
+
+
+
+
         Intent intent = new Intent(this, ListActivity.class);
         startActivity(intent);
     }

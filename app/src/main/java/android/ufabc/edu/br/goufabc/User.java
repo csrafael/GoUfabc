@@ -4,20 +4,11 @@ package android.ufabc.edu.br.goufabc;
  * Created by root on 09/08/16.
  */
 public class User implements java.io.Serializable {
-    private int id;
     private String name;
     private String user;
     private int pwd;
     private String team;
 
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

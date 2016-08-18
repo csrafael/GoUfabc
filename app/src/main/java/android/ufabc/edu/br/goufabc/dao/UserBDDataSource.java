@@ -15,7 +15,6 @@ public class UserBDDataSource extends SQLiteOpenHelper{
 
     public void onCreate(SQLiteDatabase db){
         String SQL = "CREATE TABLE "+TBL_NAME+ " ( " +
-                "     idUser int," +
                 "     name  varchar(100)," +
                 "     user   varchar(100)," +
                 "     pwd  int," +
