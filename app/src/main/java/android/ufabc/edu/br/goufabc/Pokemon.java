@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class Pokemon extends AppCompatActivity {
 
     public Context ctx;
+    public int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +36,7 @@ public class Pokemon extends AppCompatActivity {
         }
 
         Intent intent = getIntent();
-        //Bundle parametros = intent.getExtras();
         Long Ide;
-        int id;
         Ide = intent.getLongExtra("pokemon", 999);
         id = Ide.intValue();
         TextView txtDetalhes = (TextView)findViewById(R.id.nomePokemon);
@@ -71,7 +70,8 @@ public class Pokemon extends AppCompatActivity {
     }
 
     public void clickAdd(View view){
-        Intent intent = new Intent(this, TimeActivity.class);
+        Intent intent = new Intent(this, AddActivity.class);
+        intent.putExtra("pokemon", id);
         startActivity(intent);
     }
 }
