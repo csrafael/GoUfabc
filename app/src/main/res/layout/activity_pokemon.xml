@@ -13,8 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="40"
-        android:background="#650065">
+        android:layout_weight="40">
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -24,6 +23,12 @@
             android:layout_marginTop="30dp"
             android:adjustViewBounds="true"
             android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="60">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,29 +43,29 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="60"
-        android:background="#650000">
+        android:layout_weight="60">
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/imgType1"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="120dp"  />
+            android:layout_marginLeft="120dp"
+            android:adjustViewBounds="true"/>
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/imgType2"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="120dp"/>
+            android:layout_marginRight="120dp"
+            android:adjustViewBounds="true"/>
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="60"
-        android:background="#000065">
+        android:layout_weight="60">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
