@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         View view = this.getWindow().getDecorView();
         int orientation = getResources().getConfiguration().orientation;
         if(orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            view.setBackgroundResource (R.drawable.projeto_Android_Background_Landscape);
+            view.setBackgroundResource (R.drawable.projeto_android_background_landscape);
         } else {
-            view.setBackgroundResource (R.drawable.projeto_Android_Background_Portrait);
+            view.setBackgroundResource (R.drawable.projeto_android_background_portrait);
         }
 
         new SplashThread().start();

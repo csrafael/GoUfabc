@@ -25,9 +25,9 @@ public class RegActivity extends AppCompatActivity implements AdapterView.OnItem
         View view = this.getWindow().getDecorView();
         int orientation = getResources().getConfiguration().orientation;
         if(orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            view.setBackgroundResource (R.drawable.projeto_Android_Background_Landscape);
+            view.setBackgroundResource (R.drawable.projeto_android_background_landscape);
         } else {
-            view.setBackgroundResource (R.drawable.projeto_Android_Background_Portrait);
+            view.setBackgroundResource (R.drawable.projeto_android_background_portrait);
         }
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
