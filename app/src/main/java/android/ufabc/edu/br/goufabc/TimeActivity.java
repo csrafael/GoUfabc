@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.ufabc.edu.br.goufabc.dao.TimeDAO;
 import android.ufabc.edu.br.goufabc.dao.UserDAO;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class TimeActivity extends AppCompatActivity {
 
     public Context ctx;
+    ArrayList<Time> listaTimes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,18 @@ public class TimeActivity extends AppCompatActivity {
         } else {
             view.setBackgroundResource (R.drawable.projeto_android_background_portrait);
         }
+
+
+        ListView lstTimes = (ListView)findViewById(R.id.lstTimes);
+        TimeDAO timeDAO = new TimeDAO(this);
+        listaTimes = timeDAO.readAll();
+
+        ArrayAdapter<Time> adaptador = new ArrayAdapter<Time>(
+                this,
+                android.R.layout.simple_list_item_1,
+                listaTimes);
+
+        lstTimes.setAdapter(adaptador);
    }
 
 }
