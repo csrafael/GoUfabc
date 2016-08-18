@@ -42,10 +42,10 @@ public class ListActivity extends AppCompatActivity {
 
         lstPokemon.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> adaptador, View v, int pos, long id){
-                //Toast.makeText(ListActivity.this, "Pos="+pos+" Id="+id, Toast.LENGTH_LONG).show();
+                Toast.makeText(ListActivity.this, "Pokemon="+id, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(ListActivity.this, Pokemon.class);
-                //String itemClicked = lstPokemon[pos];
-                //intent.putExtra("country", itemClicked);
+                //String itemClicked = listaPokemon.get(pos);
+                //intent.putExtra("pokemon", itemClicked);
                 startActivity(intent);
 
             }
