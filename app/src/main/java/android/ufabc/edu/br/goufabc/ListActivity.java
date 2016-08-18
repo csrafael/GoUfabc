@@ -22,13 +22,14 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+        ctx = ListActivity.this;
 
         ListView lstPokemon = (ListView)findViewById(R.id.lstPokemon);
         ArrayAdapter<String> adaptador;
 
         ArrayList<String> listaPokemon = null;
         try {
-            listaPokemon = matrixToList(Matrix.readFromAssets(ctx, "pkmn.txt"));
+            listaPokemon = matrixToList(Matrix.readFromAssets(ctx));
         } catch (IOException e) {
             e.printStackTrace();
         }

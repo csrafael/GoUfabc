@@ -15,7 +15,7 @@ public class TimeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time);
 
-        ListView lstTime = (ListView)findViewById(R.id.lstTime);
+        /*ListView lstTime = (ListView)findViewById(R.id.lstTime);
         ArrayAdapter<String> adaptador;
 
         adaptador = new ArrayAdapter<String>(this,           //activity que contém a listView
@@ -32,6 +32,6 @@ public class TimeActivity extends AppCompatActivity {
                 intent.putExtra("country", itemClicked);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 }

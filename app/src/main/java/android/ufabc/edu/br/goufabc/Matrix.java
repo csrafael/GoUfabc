@@ -11,8 +11,8 @@ import java.io.InputStreamReader;
  */
 public class Matrix {
 
-    public static String[][] readFromAssets(Context context, String filename) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(context.getAssets().open(filename)));
+    public static String[][] readFromAssets(Context context) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(context.getResources().openRawResource(R.raw.pkmn)));
 
         String line = null;
         int index = 0;
