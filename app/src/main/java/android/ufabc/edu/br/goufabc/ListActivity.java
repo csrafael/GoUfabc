@@ -53,12 +53,14 @@ public class ListActivity extends AppCompatActivity {
     }
 
     public static <String> ArrayList<String> matrixToList(String[][] twod_array){
+        int j = 0;
+        int k = 1;
+
         ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < twod_array.length; i++) {
-            for (int j = 0; j < twod_array[i].length; j++) {
-                list.add(twod_array[i][j]);
-            }
+            list.add((String) (twod_array[i][j] + " " + twod_array[i][k].toString()));
         }
+        
         return list;
     }
 
