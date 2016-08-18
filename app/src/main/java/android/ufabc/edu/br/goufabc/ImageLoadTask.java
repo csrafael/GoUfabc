@@ -15,19 +15,18 @@ import android.os.AsyncTask;
 public class ImageLoadTask extends AsyncTask<Void, Void, Bitmap> {
 
     private String url;
-    private ImageView imageView;
+    private ImageView imgPkmn;
 
     public ImageLoadTask(String url, ImageView imageView) {
         this.url = url;
-        this.imageView = imageView;
+        this.imgPkmn = imageView;
     }
 
     @Override
     protected Bitmap doInBackground(Void... params) {
         try {
             URL urlConnection = new URL(url);
-            HttpURLConnection connection = (HttpURLConnection) urlConnection
-                    .openConnection();
+            HttpURLConnection connection = (HttpURLConnection) urlConnection.openConnection();
             connection.setDoInput(true);
             connection.connect();
             InputStream input = connection.getInputStream();
@@ -42,7 +41,7 @@ public class ImageLoadTask extends AsyncTask<Void, Void, Bitmap> {
     @Override
     protected void onPostExecute(Bitmap result) {
         super.onPostExecute(result);
-        imageView.setImageBitmap(result);
+        imgPkmn.setImageBitmap(result);
     }
 
 }
