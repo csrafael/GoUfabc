@@ -42,7 +42,7 @@ public class ListActivity extends AppCompatActivity {
 
         lstPokemon.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> adaptador, View v, int pos, long id){
-                Toast.makeText(ListActivity.this, "Pokemon="+pos, Toast.LENGTH_LONG).show();
+                //Toast.makeText(ListActivity.this, "Pokemon="+pos, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(ListActivity.this, Pokemon.class);
                 intent.putExtra("pokemon", id);
                 startActivity(intent);
