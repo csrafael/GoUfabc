@@ -22,8 +22,8 @@
 #022 Fearow  http://www.serebii.net/xy/pokemon/022.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #023 Ekans http://www.serebii.net/xy/pokemon/023.png http://www.serebii.net/pokedex-bw/type/poison.gif null
 #024 Arbok http://www.serebii.net/xy/pokemon/024.png http://www.serebii.net/pokedex-bw/type/poison.gif null
-#025 Pikachu http://www.serebii.net/xy/pokemon/025.png http://www.serebii.net/pokedex-bw/type/eletric.gif null
-#026 Raichu http://www.serebii.net/xy/pokemon/026.png http://www.serebii.net/pokedex-bw/type/eletric.gif null
+#025 Pikachu http://www.serebii.net/xy/pokemon/025.png http://www.serebii.net/pokedex-bw/type/electric.gif null
+#026 Raichu http://www.serebii.net/xy/pokemon/026.png http://www.serebii.net/pokedex-bw/type/electric.gif null
 #027 Sandshrew http://www.serebii.net/xy/pokemon/027.png http://www.serebii.net/pokedex-bw/type/ground.gif null
 #028 Sandslash http://www.serebii.net/xy/pokemon/028.png http://www.serebii.net/pokedex-bw/type/ground.gif null
 #029 Nidoran-F http://www.serebii.net/xy/pokemon/029.png http://www.serebii.net/pokedex-bw/type/poison.gif null
@@ -78,8 +78,8 @@
 #078 Rapidash http://www.serebii.net/xy/pokemon/078.png http://www.serebii.net/pokedex-bw/type/fire.gif null
 #079 Slowpoke http://www.serebii.net/xy/pokemon/079.png http://www.serebii.net/pokedex-bw/type/water.gif http://www.serebii.net/pokedex-bw/type/psychic.gif
 #080 Slowbro http://www.serebii.net/xy/pokemon/080.png http://www.serebii.net/pokedex-bw/type/water.gif http://www.serebii.net/pokedex-bw/type/psychic.gif
-#081 Magnemite http://www.serebii.net/xy/pokemon/081.png http://www.serebii.net/pokedex-bw/type/eletric.gif http://www.serebii.net/pokedex-bw/type/steel.gif
-#082 Magneton http://www.serebii.net/xy/pokemon/082.png http://www.serebii.net/pokedex-bw/type/eletric.gif http://www.serebii.net/pokedex-bw/type/steel.gif
+#081 Magnemite http://www.serebii.net/xy/pokemon/081.png http://www.serebii.net/pokedex-bw/type/electric.gif http://www.serebii.net/pokedex-bw/type/steel.gif
+#082 Magneton http://www.serebii.net/xy/pokemon/082.png http://www.serebii.net/pokedex-bw/type/electric.gif http://www.serebii.net/pokedex-bw/type/steel.gif
 #083 Farfetch'd http://www.serebii.net/xy/pokemon/083.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #084 Doduo http://www.serebii.net/xy/pokemon/084.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #085 Dodrio http://www.serebii.net/xy/pokemon/085.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
@@ -97,8 +97,8 @@
 #097 Hypno http://www.serebii.net/xy/pokemon/097.png http://www.serebii.net/pokedex-bw/type/psychic.gif null
 #098 Krabby http://www.serebii.net/xy/pokemon/098.png http://www.serebii.net/pokedex-bw/type/water.gif null
 #099 Kingler http://www.serebii.net/xy/pokemon/099.png http://www.serebii.net/pokedex-bw/type/water.gif null
-#100 Voltorb http://www.serebii.net/xy/pokemon/100.png http://www.serebii.net/pokedex-bw/type/eletric.gif null
-#101 Electrode http://www.serebii.net/xy/pokemon/101.png http://www.serebii.net/pokedex-bw/type/eletric.gif null
+#100 Voltorb http://www.serebii.net/xy/pokemon/100.png http://www.serebii.net/pokedex-bw/type/electric.gif null
+#101 Electrode http://www.serebii.net/xy/pokemon/101.png http://www.serebii.net/pokedex-bw/type/electric.gif null
 #102 Exeggcute http://www.serebii.net/xy/pokemon/102.png http://www.serebii.net/pokedex-bw/type/grass.gif http://www.serebii.net/pokedex-bw/type/psychic.gif
 #103 Exeggutor http://www.serebii.net/xy/pokemon/103.png http://www.serebii.net/pokedex-bw/type/grass.gif http://www.serebii.net/pokedex-bw/type/psychic.gif
 #104 Cubone http://www.serebii.net/xy/pokemon/104.png http://www.serebii.net/pokedex-bw/type/ground.gif null
@@ -122,7 +122,7 @@
 #122 Mr. Mime http://www.serebii.net/xy/pokemon/122.png http://www.serebii.net/pokedex-bw/type/psychic.gif http://www.serebii.net/pokedex-bw/type/fairy.gif
 #123 Scyther http://www.serebii.net/xy/pokemon/123.png http://www.serebii.net/pokedex-bw/type/bug.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #124 Jynx http://www.serebii.net/xy/pokemon/124.png http://www.serebii.net/pokedex-bw/type/ice.gif http://www.serebii.net/pokedex-bw/type/psychic.gif
-#125 Electabuzz http://www.serebii.net/xy/pokemon/125.png http://www.serebii.net/pokedex-bw/type/eletric.gif null
+#125 Electabuzz http://www.serebii.net/xy/pokemon/125.png http://www.serebii.net/pokedex-bw/type/electric.gif null
 #126 Magmar http://www.serebii.net/xy/pokemon/126.png http://www.serebii.net/pokedex-bw/type/fire.gif null
 #127 Pinsir http://www.serebii.net/xy/pokemon/127.png http://www.serebii.net/pokedex-bw/type/bug.gif null
 #128 Tauros http://www.serebii.net/xy/pokemon/128.png http://www.serebii.net/pokedex-bw/type/normal.gif null
@@ -132,7 +132,7 @@
 #132 Ditto http://www.serebii.net/xy/pokemon/132.png http://www.serebii.net/pokedex-bw/type/normal.gif null
 #133 Eevee http://www.serebii.net/xy/pokemon/133.png http://www.serebii.net/pokedex-bw/type/normal.gif null
 #134 Vaporeon http://www.serebii.net/xy/pokemon/134.png http://www.serebii.net/pokedex-bw/type/water.gif null
-#135 Jolteon http://www.serebii.net/xy/pokemon/135.png http://www.serebii.net/pokedex-bw/type/eletric.gif null
+#135 Jolteon http://www.serebii.net/xy/pokemon/135.png http://www.serebii.net/pokedex-bw/type/electric.gif null
 #136 Flareon http://www.serebii.net/xy/pokemon/136.png http://www.serebii.net/pokedex-bw/type/fire.gif null
 #137 Porygon http://www.serebii.net/xy/pokemon/137.png http://www.serebii.net/pokedex-bw/type/normal.gif null
 #138 Omanyte http://www.serebii.net/xy/pokemon/138.png http://www.serebii.net/pokedex-bw/type/rock.gif http://www.serebii.net/pokedex-bw/type/water.gif
@@ -142,7 +142,7 @@
 #142 Aerodactyl http://www.serebii.net/xy/pokemon/142.png http://www.serebii.net/pokedex-bw/type/rock.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #143 Snorlax http://www.serebii.net/xy/pokemon/143.png http://www.serebii.net/pokedex-bw/type/normal.gif null
 #144 Articuno http://www.serebii.net/xy/pokemon/144.png http://www.serebii.net/pokedex-bw/type/ice.gif http://www.serebii.net/pokedex-bw/type/flying.gif
-#145 Zapdos http://www.serebii.net/xy/pokemon/145.png http://www.serebii.net/pokedex-bw/type/eletric.gif http://www.serebii.net/pokedex-bw/type/flying.gif
+#145 Zapdos http://www.serebii.net/xy/pokemon/145.png http://www.serebii.net/pokedex-bw/type/electric.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #146 Moltres http://www.serebii.net/xy/pokemon/146.png http://www.serebii.net/pokedex-bw/type/fire.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #147 Dratini http://www.serebii.net/xy/pokemon/147.png http://www.serebii.net/pokedex-bw/type/dragon.gif null
 #148 Dragonair http://www.serebii.net/xy/pokemon/148.png http://www.serebii.net/pokedex-bw/type/dragon.gif null
