@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.ufabc.edu.br.goufabc.dao.TimeDAO;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddActivity extends AppCompatActivity {
 
@@ -22,19 +24,25 @@ public class AddActivity extends AppCompatActivity {
         }
     }
 
-    public void AddPoke(View view) {
-        EditText pkmNome = (EditText) findViewById(R.id.pkmNome);
-        EditText pkmCp = (EditText) findViewById(R.id.pkmCp);
-        EditText pkmHp = (EditText) findViewById(R.id.pkmHp);
+    public void gravarPokemon(View view){
+        Intent intent = getIntent();
+        int id = intent.getIntExtra("pokemon", 999);
+        String trainer = intent.getStringExtra("trainer");
+        EditText pkmNome  = (EditText)findViewById(R.id.pkmNome);
+        EditText pkmCp = (EditText)findViewById(R.id.pkmCp);
+        EditText pkmHp   = (EditText)findViewById(R.id.pkmHp);
 
-        Intent intent = new Intent(this, TimeActivity.class);
+        Time time = new Time();
+        time.setTrainer(trainer);
+        time.setNumero(String.valueOf(id+1));
+        time.setNome(pkmNome.getText().toString());
+        time.setCP(pkmCp.getText().toString());
+        time.setHP(pkmHp.toString());
 
-        Bundle parametros = new Bundle();
-        parametros.putString("pkmNome", pkmNome.getText().toString());
-        parametros.putString("pkmHp", pkmCp.getText().toString());
-        parametros.putString("pkmCp", pkmHp.getText().toString());
+        TimeDAO timeDAO = new TimeDAO(this);
+        timeDAO.create(time);
 
-        intent.putExtras(parametros);
+        Toast.makeText(this, "Pokemon adicionado ao seu Time.", Toast.LENGTH_SHORT).show();
 
     }
 }

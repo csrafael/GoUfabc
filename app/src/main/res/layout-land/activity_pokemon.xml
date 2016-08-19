@@ -8,7 +8,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:orientation="vertical"
-    android:background="@drawable/projeto_android_background_portrait"
+    android:background="@drawable/projeto_android_background_landscape"
     tools:context="android.ufabc.edu.br.goufabc.Pokemon">
 
     <RelativeLayout

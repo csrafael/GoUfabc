@@ -44,6 +44,7 @@ public class ListActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+
         adaptador = new ArrayAdapter<String>(this,           //activity que contém a listView
                 android.R.layout.simple_list_item_1, // estilo dos itens
                 listaPokemon);              // a lista de elementos ALTERAR COM A LISTA CERTA
@@ -53,10 +54,13 @@ public class ListActivity extends AppCompatActivity {
         lstPokemon.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> adaptador, View v, int pos, long id){
                 //Toast.makeText(ListActivity.this, "Pokemon="+pos, Toast.LENGTH_LONG).show();
+                Intent trainerIntent = getIntent();
+                String trainer = trainerIntent.getStringExtra("trainer");
                 Intent intent = new Intent(ListActivity.this, Pokemon.class);
                 intent.putExtra("pokemon", id);
+                intent.putExtra("trainer", trainer);
                 startActivity(intent);
-
+                //MEXI NISSO AQUI, SE DER BOSTA JÁ SEI ONDE É
             }
         });
     }

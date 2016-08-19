@@ -40,6 +40,7 @@ public class InitActivity extends AppCompatActivity {
         for(int i=0; i<999 ; i++){
             if (login.equals(Compara[i][0])){
                 if(pwd.equals(Compara[i][1])){
+                    intent.putExtra("trainer", Compara[i][0]);
                     startActivity(intent);
                     break;
                 }else{

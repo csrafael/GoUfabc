@@ -1,5 +1,6 @@
 package android.ufabc.edu.br.goufabc;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -66,7 +67,9 @@ public class RegActivity extends AppCompatActivity implements AdapterView.OnItem
         userDAO.create(user);
 
         Toast.makeText(this, "Usuário Cadastrado", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(RegActivity.this, InitActivity.class);
+        intent.putExtra("login", userLogin.getText().toString());
+        startActivity(intent);
     }
 
 }

@@ -21,6 +21,7 @@ public class Pokemon extends AppCompatActivity {
 
     public Context ctx;
     public int id;
+    public String trainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class Pokemon extends AppCompatActivity {
         }
 
         Intent intent = getIntent();
+        trainer = intent.getStringExtra("trainer");
         Long Ide;
         Ide = intent.getLongExtra("pokemon", 999);
         id = Ide.intValue();
@@ -55,6 +57,7 @@ public class Pokemon extends AppCompatActivity {
     public void clickAdd(View view){
         Intent intent = new Intent(this, AddActivity.class);
         intent.putExtra("pokemon", id);
+        intent.putExtra("trainer", trainer);
         startActivity(intent);
     }
 

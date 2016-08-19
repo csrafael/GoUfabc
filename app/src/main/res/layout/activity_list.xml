@@ -22,10 +22,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Listagem dos Cadastrados"
+            android:text="Pokémons"
             android:id="@+id/textView3"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff" />
     </RelativeLayout>
 
     <LinearLayout
@@ -47,7 +48,9 @@
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lstPokemon" />
+                android:id="@+id/lstPokemon"
+                android:textFilterEnabled="false"
+                android:background="#ffffff" />
         </LinearLayout>
 
     </LinearLayout>
