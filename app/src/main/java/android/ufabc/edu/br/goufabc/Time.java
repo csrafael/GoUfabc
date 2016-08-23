@@ -51,6 +51,6 @@ public class Time implements java.io.Serializable{
     }
 
     public String toString(){
-        return "("+numero+")"+nome;
+        return numero+" "+nome;
     }
 }

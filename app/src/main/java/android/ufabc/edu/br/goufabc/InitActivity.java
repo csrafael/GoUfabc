@@ -47,11 +47,9 @@ public class InitActivity extends AppCompatActivity {
                     Toast.makeText(this, "Senha Inválida.", Toast.LENGTH_SHORT).show();
                     break;
                 }
-            }else{
-                Toast.makeText(this, "Usuário Inexistente.", Toast.LENGTH_SHORT).show();
-                break;
             }
         }
+        Toast.makeText(this, "Usuário Inexistente.", Toast.LENGTH_SHORT).show();
     }
 
     public void clickReg(View view){
