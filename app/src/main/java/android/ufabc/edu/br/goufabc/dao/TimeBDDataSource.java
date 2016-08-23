@@ -20,13 +20,14 @@ public class TimeBDDataSource extends SQLiteOpenHelper {
 
     public void onCreate(SQLiteDatabase db){
         String SQL = "CREATE TABLE "+TBL_NAME+ " ( " +
+                "    id INTEGER PRIMARY KEY," +
                 "     trainer  varchar(100)," +
                 "     numero   varchar(100)," +
                 "     nome  varchar(100)," +
                 "     cp    varchar(100), " +
                 "     hp    varchar (100))";
-
         db.execSQL(SQL);
+
 
         Log.d("TimeBDDataSource","Base de dados criada com sucesso!");
     }

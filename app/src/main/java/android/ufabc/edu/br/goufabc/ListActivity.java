@@ -45,7 +45,7 @@ public class ListActivity extends AppCompatActivity {
             view.setBackgroundResource(R.drawable.projeto_android_background_landscape);
         }
 
-        view.setOnTouchListener(new OnSwipeTouchListener(ListActivity.this) {
+        /*view.setOnTouchListener(new OnSwipeTouchListener(ListActivity.this) {
             @Override
             public void onSwipeLeft() {
                 Intent intent = new Intent(ListActivity.this, TimeActivity.class);
@@ -55,7 +55,7 @@ public class ListActivity extends AppCompatActivity {
 
         OnSwipeTouchListener onSwipeTouchListener = new OnSwipeTouchListener(ListActivity.this) {
 
-        };
+        };*/
 
         ctx = ListActivity.this;
 
@@ -151,7 +151,7 @@ public class ListActivity extends AppCompatActivity {
         client.disconnect();
     }
 
-    public class OnSwipeTouchListener implements OnTouchListener {
+   /* public class OnSwipeTouchListener implements OnTouchListener {
 
         private final GestureDetector gestureDetector;
 
@@ -217,6 +217,6 @@ public class ListActivity extends AppCompatActivity {
 
         public void onSwipeBottom() {
         }
-    }
+    }*/
 
 }

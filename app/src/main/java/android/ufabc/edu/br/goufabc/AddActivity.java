@@ -5,8 +5,13 @@ import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.ufabc.edu.br.goufabc.dao.TimeDAO;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AddActivity extends AppCompatActivity {
@@ -22,6 +27,19 @@ public class AddActivity extends AppCompatActivity {
         } else {
             view.setBackgroundResource (R.drawable.projeto_android_background_portrait);
         }
+
+        EditText edit_txt = (EditText) findViewById(R.id.pkmHp);
+        final ImageButton btnAdd = (ImageButton) findViewById(R.id.btnAdd);
+        edit_txt.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    btnAdd.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
     public void gravarPokemon(View view){

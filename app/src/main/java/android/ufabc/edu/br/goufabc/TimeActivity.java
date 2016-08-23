@@ -1,24 +1,20 @@
 package android.ufabc.edu.br.goufabc;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.ufabc.edu.br.goufabc.dao.TimeDAO;
-import android.ufabc.edu.br.goufabc.dao.TimeDAO;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class TimeActivity extends AppCompatActivity {
 
@@ -42,35 +38,45 @@ public class TimeActivity extends AppCompatActivity {
         TimeDAO timeDAO = new TimeDAO(this);
         listaTimes = timeDAO.readAll();
 
-        ArrayAdapter<Time> adaptador = new ArrayAdapter<Time>(
-                this,
-                android.R.layout.simple_list_item_1,
-                listaTimes);
+        if (listaTimes == null){
+            Toast.makeText(TimeActivity.this,"Animal", Toast.LENGTH_LONG).show();
 
-        lstTimes.setAdapter(adaptador);
+        }else {
+            ArrayAdapter<Time> adaptador = new ArrayAdapter<Time>(
+                    this,
+                    android.R.layout.simple_list_item_1,
+                    listaTimes);
 
-        lstTimes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Log.d("TESTE","passou por aqui");
-                // o que fazer?
-                // peguei o livro na posicao
-                Time time = listaTimes.get(position);
-                // crio um AlertDialog.Builder com base no contexto da app
-                AlertDialog.Builder mensagem = new AlertDialog.Builder(TimeActivity.this);
-                // começo a parametrizar o alert
-                mensagem.setTitle("Detalhe do Livro");
-                mensagem.setMessage("Autor   "+time.getNumero() + "\n"+
-                        "Editora "+time.getNome()+"\n"+
-                        "Gênero  "+time.getCP()+"\n"+
-                        "HP "+time.getHP());
-                mensagem.setNeutralButton("Ok", null);
+            lstTimes.setAdapter(adaptador);
 
-                mensagem.show();
+            lstTimes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
 
-            }
-        });
+                    Time time = listaTimes.get(position);
+                    AlertDialog.Builder mensagem = new AlertDialog.Builder(TimeActivity.this);
+                    mensagem.setTitle("Pokémon");
+                    mensagem.setMessage("Número:   " + time.getNumero() + "\n" +
+                            "Nome: " + time.getNome() + "\n" +
+                            "CP:  " + time.getCP() + "\n" +
+                            "HP: " + time.getHP());
+                    mensagem.setNeutralButton("Cancelar", null);
+                    mensagem.setPositiveButton("Remover", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            //Toast.makeText(TimeActivity.this,"You clicked yes button",Toast.LENGTH_LONG).show();
+                        }
+                    });
+                    mensagem.show();
 
+                }
+            });
+        }
    }
+
+    public void deletaTudo(View view){
+        TimeDAO timeDAO = new TimeDAO(this);
+        timeDAO.deleteAll();
+    }
 }

@@ -46,8 +46,7 @@ public class TimeDAO implements DAO{
 
     public ArrayList<Time> readAll(){
         try{
-            Log.d("TIMEDAO.READALL", "Iniciou");
-            String colunas[] = {"numero","nome","cp","hp"};
+            String colunas[] = {"rowid","numero","nome","cp","hp"};
             SQLiteDatabase db = dataSource.getReadableDatabase();
 
             Cursor cursor = db.query(false,                       // quero distinct?
@@ -60,15 +59,21 @@ public class TimeDAO implements DAO{
                     null,                        // order by
                     null);                       // limit
 
-            Log.d("TIMEDAO.READALL", "Antes do IF");
             if (cursor.moveToFirst()){
                 ArrayList<Time> resultSet = new ArrayList<Time>();
                 do{
                     Time time = new Time();
-                    time.setNumero(cursor.getString(0));
+
+                    time.setID(cursor.getInt(0));
+                    time.setNumero(cursor.getString(1));
+                    time.setNome(cursor.getString(2));
+                    time.setCP(cursor.getString(3));
+                    time.setHP(cursor.getString(4));
+
+/*                    time.setID(cursor.getInt(0));
                     time.setNome(cursor.getString(1));
                     time.setCP(cursor.getString(2));
-                    time.setHP(cursor.getString(3));
+                    time.setHP(cursor.getString(3));*/
                     resultSet.add(time);
                 } while (cursor.moveToNext());
                 db.close();
@@ -96,8 +101,14 @@ public class TimeDAO implements DAO{
 
     @Override
     public void delete(Object o) {
-
+/*        SQLiteDatabase db = dataSource.getWritableDatabase();
+        db.delete(TimeBDDataSource.TBL_NAME, KEY_ID + " = ?",
+                new String[] { String.valueOf(time.getId()) });
+        db.close();*/
     }
 
-
+    public void deleteAll(){
+        SQLiteDatabase db = dataSource.getWritableDatabase();
+        db.delete(TimeBDDataSource.TBL_NAME, null, null);
+    }
 }

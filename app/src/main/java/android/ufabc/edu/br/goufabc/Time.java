@@ -4,11 +4,20 @@ package android.ufabc.edu.br.goufabc;
  * Created by root on 18/08/16.
  */
 public class Time implements java.io.Serializable{
+    private int ID;
     private String trainer;
     private String numero;
     private String nome;
     private String CP;
     private String HP;
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
     public String getTrainer() {
         return trainer;
@@ -51,6 +60,7 @@ public class Time implements java.io.Serializable{
     }
 
     public String toString(){
-        return numero+" "+nome;
+        return nome;
     }
+
 }

@@ -48,9 +48,17 @@
 
             <ListView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="364dp"
                 android:id="@+id/lstTimes"
                 android:background="#ffffff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="APAGAR TUDO"
+                android:id="@+id/btnDelAll"
+                android:layout_gravity="center_horizontal"
+                android:onClick="deletaTudo" />
         </LinearLayout>
 
     </LinearLayout>
