@@ -20,6 +20,7 @@ public class TimeActivity extends AppCompatActivity {
 
     public Context ctx;
     ArrayList<Time> listaTimes;
+    public int delid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class TimeActivity extends AppCompatActivity {
 
 
         ListView lstTimes = (ListView)findViewById(R.id.lstTimes);
-        TimeDAO timeDAO = new TimeDAO(this);
+        final TimeDAO timeDAO = new TimeDAO(this);
         listaTimes = timeDAO.readAll();
 
         if (listaTimes == null){
@@ -55,6 +56,7 @@ public class TimeActivity extends AppCompatActivity {
                                         int position, long id) {
 
                     Time time = listaTimes.get(position);
+                    delid = time.getID();
                     AlertDialog.Builder mensagem = new AlertDialog.Builder(TimeActivity.this);
                     mensagem.setTitle("Pokémon");
                     mensagem.setMessage("Número:   " + time.getNumero() + "\n" +
@@ -65,6 +67,9 @@ public class TimeActivity extends AppCompatActivity {
                     mensagem.setPositiveButton("Remover", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface arg0, int arg1) {
+                            Time time = new Time();
+                            time.setID(delid);
+                            timeDAO.delete(delid);
                             //Toast.makeText(TimeActivity.this,"You clicked yes button",Toast.LENGTH_LONG).show();
                         }
                     });

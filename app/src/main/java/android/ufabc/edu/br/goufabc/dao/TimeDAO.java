@@ -69,16 +69,11 @@ public class TimeDAO implements DAO{
                     time.setNome(cursor.getString(2));
                     time.setCP(cursor.getString(3));
                     time.setHP(cursor.getString(4));
-
-/*                    time.setID(cursor.getInt(0));
-                    time.setNome(cursor.getString(1));
-                    time.setCP(cursor.getString(2));
-                    time.setHP(cursor.getString(3));*/
                     resultSet.add(time);
+
                 } while (cursor.moveToNext());
                 db.close();
                 cursor.close();
-                Log.d("TIMEDAO.READALL", "Antes do return");
                 return resultSet;
             }
 
@@ -101,10 +96,9 @@ public class TimeDAO implements DAO{
 
     @Override
     public void delete(Object o) {
-/*        SQLiteDatabase db = dataSource.getWritableDatabase();
-        db.delete(TimeBDDataSource.TBL_NAME, KEY_ID + " = ?",
-                new String[] { String.valueOf(time.getId()) });
-        db.close();*/
+        SQLiteDatabase db = dataSource.getWritableDatabase();
+        db.delete(TimeBDDataSource.TBL_NAME, "rowid = ?", new String[]{String.valueOf(o)});
+        db.close();
     }
 
     public void deleteAll(){
