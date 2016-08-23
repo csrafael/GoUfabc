@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class TimeActivity extends AppCompatActivity {
 
@@ -47,6 +48,7 @@ public class TimeActivity extends AppCompatActivity {
                 listaTimes);
 
         lstTimes.setAdapter(adaptador);
+
         lstTimes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
@@ -59,10 +61,10 @@ public class TimeActivity extends AppCompatActivity {
                 AlertDialog.Builder mensagem = new AlertDialog.Builder(TimeActivity.this);
                 // começo a parametrizar o alert
                 mensagem.setTitle("Detalhe do Livro");
-                mensagem.setMessage("Titulo  "+time.getTrainer()+"\n"+
-                        "Autor   "+time.getNumero() + "\n"+
+                mensagem.setMessage("Autor   "+time.getNumero() + "\n"+
                         "Editora "+time.getNome()+"\n"+
-                        "Gênero  "+time.getCP());
+                        "Gênero  "+time.getCP()+"\n"+
+                        "HP "+time.getHP());
                 mensagem.setNeutralButton("Ok", null);
 
                 mensagem.show();

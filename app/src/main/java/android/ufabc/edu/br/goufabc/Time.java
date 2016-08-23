@@ -49,4 +49,8 @@ public class Time implements java.io.Serializable{
     public void setHP(String HP) {
         this.HP = HP;
     }
+
+    public String toString(){
+        return "("+numero+")"+nome;
+    }
 }

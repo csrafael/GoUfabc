@@ -65,10 +65,10 @@ public class TimeDAO implements DAO{
                 ArrayList<Time> resultSet = new ArrayList<Time>();
                 do{
                     Time time = new Time();
-                    /*time.setNumero(cursor.getString(0));*/
+                    time.setNumero(cursor.getString(0));
                     time.setNome(cursor.getString(1));
-                    /*time.setCP(cursor.getString(2));
-                    time.setHP(cursor.getString(3));*/
+                    time.setCP(cursor.getString(2));
+                    time.setHP(cursor.getString(3));
                     resultSet.add(time);
                 } while (cursor.moveToNext());
                 db.close();
