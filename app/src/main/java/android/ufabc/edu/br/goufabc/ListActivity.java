@@ -65,6 +65,11 @@ public class ListActivity extends AppCompatActivity {
         });
     }
 
+    public void abrirTime(View view){
+        Intent intent = new Intent(this, TimeActivity.class);
+        startActivity(intent);
+    }
+
 
     public static <String> ArrayList<String> matrixToList(String[][] twod_array){
         int j = 0;
@@ -76,6 +81,6 @@ public class ListActivity extends AppCompatActivity {
         }
         
         return list;
-    }
+   }
 
 }

@@ -37,7 +37,7 @@ public class AddActivity extends AppCompatActivity {
         time.setNumero(String.valueOf(id+1));
         time.setNome(pkmNome.getText().toString());
         time.setCP(pkmCp.getText().toString());
-        time.setHP(pkmHp.toString());
+        time.setHP(pkmHp.getText().toString());
 
         TimeDAO timeDAO = new TimeDAO(this);
         timeDAO.create(time);
