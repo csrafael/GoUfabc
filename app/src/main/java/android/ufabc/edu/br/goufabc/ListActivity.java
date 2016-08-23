@@ -94,7 +94,10 @@ public class ListActivity extends AppCompatActivity {
     }
 
     public void abrirTime(View view){
+        Intent trainerIntent = getIntent();
+        String trainer = trainerIntent.getStringExtra("trainer");
         Intent intent = new Intent(this, TimeActivity.class);
+        intent.putExtra("trainer", trainer);
         startActivity(intent);
     }
 

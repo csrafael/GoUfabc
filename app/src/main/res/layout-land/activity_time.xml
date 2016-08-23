@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="MEU TIME"
+            android:text="Seu Time"
             android:id="@+id/textView3"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
@@ -64,5 +64,5 @@
         android:id="@+id/btnDelAll"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"
-        android:onClick="deletaTudo" />
+        android:onClick="abrirTime" />
 </LinearLayout>

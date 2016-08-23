@@ -8,7 +8,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:orientation="vertical"
-    android:id="@+id/telaTime"
+    android:id="@+id/tela2Master"
     tools:context="android.ufabc.edu.br.goufabc.ListActivity">
 
 
@@ -16,18 +16,25 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="15"
-        android:id="@+id/telaTimeTop">
+        android:id="@+id/tela2Cabecalho">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="MEU TIME"
-            android:id="@+id/textView3"
+        TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pokémons"
+        android:id="@+id/textView3"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="270dp"
+            android:layout_height="110dp"
+            android:id="@+id/imageView3"
+            android:background="@drawable/projeto_android_logotipo"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:textColor="#ffffff"
-            android:textIsSelectable="false" />
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
     <LinearLayout
@@ -37,8 +44,7 @@
         android:layout_weight="70"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:id="@+id/tela2Container"
-        >
+        android:id="@+id/tela2Container">
 
         <LinearLayout
             android:orientation="vertical"
@@ -49,7 +55,7 @@
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/lstTimes"
+                android:id="@+id/lstPokemon"
                 android:textFilterEnabled="false"
                 android:background="#ffffff" />
 
@@ -60,9 +66,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="APAGAR TUDO"
-        android:id="@+id/btnDelAll"
+        android:text="MEU TIME"
+        android:id="@+id/timeBtn"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"
-        android:onClick="deletaTudo" />
+        android:onClick="abrirTime" />
 </LinearLayout>

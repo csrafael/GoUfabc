@@ -18,7 +18,7 @@
         android:layout_weight="15"
         android:id="@+id/tela2Cabecalho">
 
-        TextView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -44,8 +44,7 @@
         android:layout_weight="70"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:id="@+id/tela2Container"
-        android:background="#DEB887">
+        android:id="@+id/tela2Container">
 
         <LinearLayout
             android:orientation="vertical"
@@ -55,19 +54,21 @@
 
             <ListView
                 android:layout_width="match_parent"
-                android:layout_height="371dp"
+                android:layout_height="match_parent"
                 android:id="@+id/lstPokemon"
                 android:textFilterEnabled="false"
                 android:background="#ffffff" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vaitime"
-                android:id="@+id/timeBtn"
-                android:layout_gravity="center_horizontal"
-                android:onClick="abrirTime" />
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MEU TIME"
+        android:id="@+id/timeBtn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:onClick="abrirTime" />
 </LinearLayout>

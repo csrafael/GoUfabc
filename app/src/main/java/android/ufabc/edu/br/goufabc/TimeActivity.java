@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class TimeActivity extends AppCompatActivity {
 
     public Context ctx;
-    ArrayList<Time> listaTimes;
+    ArrayList<Time> listaTimes = null;
     public int delid;
 
     @Override
@@ -37,10 +37,17 @@ public class TimeActivity extends AppCompatActivity {
 
         ListView lstTimes = (ListView)findViewById(R.id.lstTimes);
         final TimeDAO timeDAO = new TimeDAO(this);
-        listaTimes = timeDAO.readAll();
+
+        Intent trainintent = getIntent();
+        String trainer = trainintent.getStringExtra("trainer");
+        System.out.println(trainer);
+        Time time = new Time();
+        time.setTrainer(trainer);
+        System.out.println(String.valueOf(time.getTrainer()));
+        listaTimes = (ArrayList<Time>) timeDAO.read(time.getTrainer());
 
         if (listaTimes == null){
-            Toast.makeText(TimeActivity.this,"Animal", Toast.LENGTH_LONG).show();
+            Toast.makeText(TimeActivity.this,"Seu time está vazio. Adicione um pokémon.", Toast.LENGTH_LONG).show();
 
         }else {
             ArrayAdapter<Time> adaptador = new ArrayAdapter<Time>(
@@ -49,7 +56,7 @@ public class TimeActivity extends AppCompatActivity {
                     listaTimes);
 
             lstTimes.setAdapter(adaptador);
-
+            final Intent intent = new Intent(this, TimeActivity.class);
             lstTimes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view,
@@ -67,10 +74,9 @@ public class TimeActivity extends AppCompatActivity {
                     mensagem.setPositiveButton("Remover", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface arg0, int arg1) {
-                            Time time = new Time();
-                            time.setID(delid);
                             timeDAO.delete(delid);
-                            //Toast.makeText(TimeActivity.this,"You clicked yes button",Toast.LENGTH_LONG).show();
+                            finish();
+                            startActivity(intent);
                         }
                     });
                     mensagem.show();
@@ -83,5 +89,8 @@ public class TimeActivity extends AppCompatActivity {
     public void deletaTudo(View view){
         TimeDAO timeDAO = new TimeDAO(this);
         timeDAO.deleteAll();
+        Intent intent = new Intent(this, TimeActivity.class);
+        finish();
+        startActivity(intent);
     }
 }

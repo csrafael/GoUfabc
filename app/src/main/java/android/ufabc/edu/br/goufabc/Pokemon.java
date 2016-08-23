@@ -59,6 +59,7 @@ public class Pokemon extends AppCompatActivity {
         intent.putExtra("pokemon", id);
         intent.putExtra("trainer", trainer);
         startActivity(intent);
+        finish();
     }
 
     private class LoadImagefromUrl extends AsyncTask< Object, Void, Bitmap > {

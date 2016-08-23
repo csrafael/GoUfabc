@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="android.ufabc.edu.br.goufabc.InitActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="LOGIN"
+        android:id="@+id/textView3"
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editLogin"
+        android:inputType="text"
+        android:layout_alignParentEnd="true"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="SENHA"
+        android:id="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/editLogin"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/editPwd"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:imeOptions="actionDone"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:id="@+id/btnLogin"
+        android:layout_gravity="center_horizontal"
+        android:onClick="clickLogin"
+        android:layout_marginBottom="23dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_toLeftOf="@+id/btnReg"
+        android:layout_toStartOf="@+id/btnReg"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp" />
+
+    <Button
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:text="REGISTRAR"
+        android:id="@+id/btnReg"
+        android:layout_gravity="center_horizontal"
+        android:onClick="clickReg"
+        android:layout_alignBaseline="@+id/btnLogin"
+        android:layout_alignBottom="@+id/btnLogin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="270dp"
+        android:layout_height="110dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/projeto_android_logotipo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
+
+

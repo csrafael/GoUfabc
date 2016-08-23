@@ -78,6 +78,7 @@ public class InitActivity extends AppCompatActivity {
     public void clickReg(View view){
         Intent intent = new Intent(this, RegActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }

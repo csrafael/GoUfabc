@@ -62,6 +62,8 @@ public class AddActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Pokemon adicionado ao seu Time.", Toast.LENGTH_SHORT).show();
         intent = new Intent(this, TimeActivity.class);
+        intent.putExtra("trainer", trainer);
         startActivity(intent);
+        finish();
     }
 }

@@ -45,14 +45,14 @@ public class TimeDAO implements DAO{
     }
 
     public ArrayList<Time> readAll(){
-        try{
+ /*       try{
             String colunas[] = {"rowid","numero","nome","cp","hp"};
             SQLiteDatabase db = dataSource.getReadableDatabase();
 
             Cursor cursor = db.query(false,                       // quero distinct?
                     TimeBDDataSource.TBL_NAME,  // nome da tabela
                     colunas,                     // quais colunas retornar?
-                    null,                        // tem where?
+                    trainer,                        // tem where?
                     null,                        // parametros do where
                     null,                        // groupby
                     null,                        // colunas do having
@@ -80,12 +80,52 @@ public class TimeDAO implements DAO{
         }
         catch(Exception ex){
             Log.d("TIMEDAO.READALL", ex.getMessage());
-        }
+        }*/
         return null;
     }
 
     @Override
     public Object read(Object o) {
+        try{
+            String whereClause = "trainer = ?";
+            String[] whereArgs = new String[] {String.valueOf(o)};
+            System.out.println(whereArgs[0]);
+            String colunas[] = {"rowid","trainer","numero","nome","cp","hp"};
+            SQLiteDatabase db = dataSource.getReadableDatabase();
+
+            Cursor cursor = db.query(false,                       // quero distinct?
+                    TimeBDDataSource.TBL_NAME,  // nome da tabela
+                    colunas,                     // quais colunas retornar?
+                    whereClause,                        // tem where?
+                    whereArgs,                        // parametros do where
+                    null,                        // groupby
+                    null,                        // colunas do having
+                    null,                        // order by
+                    null);                       // limit
+
+            if (cursor.moveToFirst()){
+                ArrayList<Time> resultSet = new ArrayList<Time>();
+                do{
+                    Time time = new Time();
+
+                    time.setID(cursor.getInt(0));
+                    time.setTrainer(cursor.getString(1));
+                    time.setNumero(cursor.getString(2));
+                    time.setNome(cursor.getString(3));
+                    time.setCP(cursor.getString(4));
+                    time.setHP(cursor.getString(5));
+                    resultSet.add(time);
+
+                } while (cursor.moveToNext());
+                db.close();
+                cursor.close();
+                return resultSet;
+            }
+
+        }
+        catch(Exception ex){
+            Log.d("TIMEDAO.READ", ex.getMessage());
+        }
         return null;
     }
 

@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:text="Nome"
         android:id="@+id/textView5"
         android:layout_below="@+id/textView"
@@ -47,6 +47,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_marginTop="10dp"
+        android:inputType="number"
         android:text="CP"
         android:id="@+id/textView6"
         android:layout_below="@+id/pkmNome"
@@ -71,6 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:inputType="number"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="HP"
         android:id="@+id/textView7"
@@ -101,8 +103,8 @@
         android:onClick="gravarPokemon"
         android:adjustViewBounds="true"
         android:background="@drawable/projeto_android_plus_button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="93dp" />
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignRight="@+id/pkmNome"
+        android:layout_alignEnd="@+id/pkmNome" />
 
 </RelativeLayout>

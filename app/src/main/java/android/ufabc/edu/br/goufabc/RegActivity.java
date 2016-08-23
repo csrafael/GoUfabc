@@ -50,7 +50,6 @@ public class RegActivity extends AppCompatActivity implements AdapterView.OnItem
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         item = parent.getItemAtPosition(position).toString();
-        //Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
     }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
@@ -74,6 +73,7 @@ public class RegActivity extends AppCompatActivity implements AdapterView.OnItem
         Intent intent = new Intent(RegActivity.this, InitActivity.class);
         intent.putExtra("login", userLogin.getText().toString());
         startActivity(intent);
+        finish();
     }
 
 }
