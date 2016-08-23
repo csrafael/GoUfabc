@@ -45,9 +45,9 @@ public class ListActivity extends AppCompatActivity {
         }
 
 
-        adaptador = new ArrayAdapter<String>(this,           //activity que contém a listView
-                android.R.layout.simple_list_item_1, // estilo dos itens
-                listaPokemon);              // a lista de elementos ALTERAR COM A LISTA CERTA
+        adaptador = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1,
+                listaPokemon);
 
         lstPokemon.setAdapter(adaptador);
 
