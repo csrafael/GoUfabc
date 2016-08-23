@@ -7,6 +7,8 @@ import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,6 +40,7 @@ public class Pokemon extends AppCompatActivity {
 
         Intent intent = getIntent();
         trainer = intent.getStringExtra("trainer");
+        System.out.println(trainer+" 1");
         Long Ide;
         Ide = intent.getLongExtra("pokemon", 999);
         id = Ide.intValue();
@@ -52,6 +55,31 @@ public class Pokemon extends AppCompatActivity {
         if (listaPokemon[id][4].toString() != "null"){
             new LoadImagefromUrl( ).execute((ImageView) findViewById(R.id.imgType2), listaPokemon[id][4].toString());
         }
+
+        View view = this.getWindow().getDecorView();
+        view.setOnTouchListener(new OnSwipeTouchListener(Pokemon.this) {
+            @Override
+            public void onSwipeLeft() {
+                Intent intent = new Intent(Pokemon.this, Pokemon.class);
+                Long ID = (long) (id + 1);
+                intent.putExtra("pokemon", ID);
+                intent.putExtra("trainer", trainer);
+                finish();
+                startActivity(intent);
+            }
+            public void onSwipeRight() {
+                Intent intent = new Intent(Pokemon.this, Pokemon.class);
+                Long ID = (long) (id - 1);
+                intent.putExtra("pokemon", ID);
+                intent.putExtra("trainer", trainer);
+                finish();
+                startActivity(intent);
+            }
+        });
+
+        OnSwipeTouchListener onSwipeTouchListener = new OnSwipeTouchListener(Pokemon.this) {
+
+        };
     }
 
     public void clickAdd(View view){
@@ -93,5 +121,73 @@ public class Pokemon extends AppCompatActivity {
             e.printStackTrace( );
         }
         return bitmap;
+    }
+
+    public class OnSwipeTouchListener implements View.OnTouchListener {
+
+        private final GestureDetector gestureDetector;
+
+        public OnSwipeTouchListener (Context ctx){
+            gestureDetector = new GestureDetector(ctx, new GestureListener());
+        }
+
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            return gestureDetector.onTouchEvent(event);
+        }
+
+        private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
+
+            private static final int SWIPE_THRESHOLD = 100;
+            private static final int SWIPE_VELOCITY_THRESHOLD = 100;
+
+            @Override
+            public boolean onDown(MotionEvent e) {
+                return true;
+            }
+
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                boolean result = false;
+                try {
+                    float diffY = e2.getY() - e1.getY();
+                    float diffX = e2.getX() - e1.getX();
+                    if (Math.abs(diffX) > Math.abs(diffY)) {
+                        if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
+                            if (diffX > 0) {
+                                onSwipeRight();
+                            } else {
+                                onSwipeLeft();
+                            }
+                        }
+                        result = true;
+                    }
+                    else if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
+                        if (diffY > 0) {
+                            onSwipeBottom();
+                        } else {
+                            onSwipeTop();
+                        }
+                    }
+                    result = true;
+
+                } catch (Exception exception) {
+                    exception.printStackTrace();
+                }
+                return result;
+            }
+        }
+
+        public void onSwipeRight() {
+        }
+
+        public void onSwipeLeft() {
+        }
+
+        public void onSwipeTop() {
+        }
+
+        public void onSwipeBottom() {
+        }
     }
 }

@@ -48,7 +48,7 @@ public class InitActivity extends AppCompatActivity {
 
     public void clickLogin(View view){
         Intent intent = new Intent(this, ListActivity.class);
-        String[][] Compara = new String[1000][2];
+        String[][] Compara;
         UserDAO dao = new UserDAO(this);
         Compara = dao.readAll();
 

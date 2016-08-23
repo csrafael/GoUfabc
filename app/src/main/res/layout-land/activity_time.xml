@@ -57,12 +57,4 @@
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="APAGAR TUDO"
-        android:id="@+id/btnDelAll"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
-        android:onClick="abrirTime" />
 </LinearLayout>

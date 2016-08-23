@@ -57,6 +57,7 @@ public class TimeActivity extends AppCompatActivity {
 
             lstTimes.setAdapter(adaptador);
             final Intent intent = new Intent(this, TimeActivity.class);
+            intent.putExtra("trainer", trainer);
             lstTimes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view,
@@ -86,11 +87,11 @@ public class TimeActivity extends AppCompatActivity {
         }
    }
 
-    public void deletaTudo(View view){
+/*    public void deletaTudo(View view){
         TimeDAO timeDAO = new TimeDAO(this);
         timeDAO.deleteAll();
         Intent intent = new Intent(this, TimeActivity.class);
         finish();
         startActivity(intent);
-    }
+    }*/
 }
