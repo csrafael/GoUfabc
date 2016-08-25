@@ -86,12 +86,4 @@ public class TimeActivity extends AppCompatActivity {
             });
         }
    }
-
-/*    public void deletaTudo(View view){
-        TimeDAO timeDAO = new TimeDAO(this);
-        timeDAO.deleteAll();
-        Intent intent = new Intent(this, TimeActivity.class);
-        finish();
-        startActivity(intent);
-    }*/
 }

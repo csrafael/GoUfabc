@@ -45,18 +45,6 @@ public class ListActivity extends AppCompatActivity {
             view.setBackgroundResource(R.drawable.projeto_android_background_landscape);
         }
 
-        /*view.setOnTouchListener(new OnSwipeTouchListener(ListActivity.this) {
-            @Override
-            public void onSwipeLeft() {
-                Intent intent = new Intent(ListActivity.this, TimeActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        OnSwipeTouchListener onSwipeTouchListener = new OnSwipeTouchListener(ListActivity.this) {
-
-        };*/
-
         ctx = ListActivity.this;
 
         ListView lstPokemon = (ListView) findViewById(R.id.lstPokemon);

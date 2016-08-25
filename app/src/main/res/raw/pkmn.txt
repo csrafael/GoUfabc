@@ -19,7 +19,7 @@
 #019 Rattata http://www.serebii.net/xy/pokemon/019.png http://www.serebii.net/pokedex-bw/type/normal.gif null
 #020 Raticate http://www.serebii.net/xy/pokemon/020.png http://www.serebii.net/pokedex-bw/type/normal.gif null
 #021 Spearow http://www.serebii.net/xy/pokemon/021.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
-#022 Fearow  http://www.serebii.net/xy/pokemon/022.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
+#022 Fearow http://www.serebii.net/xy/pokemon/022.png http://www.serebii.net/pokedex-bw/type/normal.gif http://www.serebii.net/pokedex-bw/type/flying.gif
 #023 Ekans http://www.serebii.net/xy/pokemon/023.png http://www.serebii.net/pokedex-bw/type/poison.gif null
 #024 Arbok http://www.serebii.net/xy/pokemon/024.png http://www.serebii.net/pokedex-bw/type/poison.gif null
 #025 Pikachu http://www.serebii.net/xy/pokemon/025.png http://www.serebii.net/pokedex-bw/type/electric.gif null

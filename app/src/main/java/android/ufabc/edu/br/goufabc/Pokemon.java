@@ -40,7 +40,6 @@ public class Pokemon extends AppCompatActivity {
 
         Intent intent = getIntent();
         trainer = intent.getStringExtra("trainer");
-        System.out.println(trainer+" 1");
         Long Ide;
         Ide = intent.getLongExtra("pokemon", 999);
         id = Ide.intValue();
@@ -52,7 +51,7 @@ public class Pokemon extends AppCompatActivity {
 
         new LoadImagefromUrl( ).execute((ImageView) findViewById(R.id.imgType1), listaPokemon[id][3].toString());
 
-        if (listaPokemon[id][4].toString() != "null"){
+        if (!(listaPokemon[id][4].toString().equals("null"))){
             new LoadImagefromUrl( ).execute((ImageView) findViewById(R.id.imgType2), listaPokemon[id][4].toString());
         }
 
@@ -76,10 +75,6 @@ public class Pokemon extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        OnSwipeTouchListener onSwipeTouchListener = new OnSwipeTouchListener(Pokemon.this) {
-
-        };
     }
 
     public void clickAdd(View view){
@@ -91,7 +86,7 @@ public class Pokemon extends AppCompatActivity {
     }
 
     private class LoadImagefromUrl extends AsyncTask< Object, Void, Bitmap > {
-        ImageView ivPreview = null;
+        ImageView ivPreview;
 
         @Override
         protected Bitmap doInBackground( Object... params ) {
