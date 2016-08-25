@@ -18,16 +18,6 @@
         android:layout_weight="15"
         android:id="@+id/tela2Cabecalho">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Pokémons"
-            android:id="@+id/textView3"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:textColor="#ffffff" />
-
         <ImageView
             android:layout_width="270dp"
             android:layout_height="110dp"
